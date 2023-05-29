@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrutaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/insertarFruta', [FrutaController::class, 'index']);
+Route::post('/insertarFruta', [FrutaController::class, 'insertar']);
+Route::get('/Frutas', [FrutaController::class, 'obtener']);
