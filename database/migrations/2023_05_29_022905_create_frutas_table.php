@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('frutas', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nombre');
+            $table->float('precio');
+            $table->integer('cantidad');
         });
     }
 
